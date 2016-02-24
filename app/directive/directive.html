@@ -1,0 +1,15 @@
+<div>
+    <a target="_blank" href="https://docs.angularjs.org/api/ng/directive">> Toutes les directives angular</a>
+</div>
+
+<div>
+    <label for="filter">Age max.</label>
+    <input id="filter" type="text" ng-model="ageFilter"/>
+
+    <ul>
+        <li ng-repeat="person in people" ng-show="!ageFilter || person.age < ageFilter">
+            {{ person.firstname }} {{ person.lastname }}, age: {{ person.age }}
+        </li>
+    </ul>
+
+</div>

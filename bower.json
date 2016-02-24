@@ -10,7 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "angular": "1.4",
-    "ui-router": "~0.2.11"
+    "ui-router": "~0.2.11",
+    "bootstrap-css": "~3.3.4"
   },
   "ignore": [
     "**/.*",

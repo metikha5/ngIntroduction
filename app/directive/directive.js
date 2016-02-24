@@ -23,6 +23,23 @@
     }
 
     function MainController($scope) {
-        $scope.authors = []
+        $scope.people = [
+            {
+                firstname: 'John',
+                lastname: 'Coffey',
+                age: 43
+            },
+            {
+                firstname: 'John',
+                lastname: 'Cena',
+                age: 38
+            },
+            {
+                firstname: 'John',
+                lastname: 'Travolta',
+                age: 62
+            }
+        ];
+
     }
 })();
