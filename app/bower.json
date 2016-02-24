@@ -1,0 +1,23 @@
+{
+  "name": "ngIntroduction",
+  "version": "0.0.1",
+  "authors": [
+    "bremec_m <michael.bremec@epitech.eu>",
+    "delacr_m <delacr_m@epitech.eu>"
+  ],
+  "description": "Introduction angular",
+  "main": "app.js",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "1.4",
+    "ui-router": "~0.2.11"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ]
+}

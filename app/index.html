@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>ngIntroduction</title>
+
+    <script type="application/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="application/javascript" src="bower_components/ui-router/release/angular-ui-router.js"></script>
+
+    <script type="application/javascript" src="app.js"></script>
+    <script src="binding/binding.js"></script>
+    <script src="directive/directive.js"></script>
+</head>
+<body>
+<div id="header" ui-view="header"></div>
+<div id="content" ui-view="content"></div>
+<div id="footer" ui-view="footer"></div>
+</body>
+</html>
+
