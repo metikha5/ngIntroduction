@@ -1,19 +1,20 @@
 (function () {
-    angular.module('demo.directive', [])
+    angular.module('demo.people', [])
 
     .config(['$stateProvider', RouteConfig])
-    .controller('MainCtrl', ['$scope', MainController]);
+    .controller('MainCtrl', ['$scope', MainController])
+    .directive('dude', DudeDirective);
 
     function RouteConfig($stateProvider) {
-        $stateProvider.state('directive', {
-            url: '/directive',
+        $stateProvider.state('people', {
+            url: '/people',
             views: {
                 'content@': {
-                    templateUrl: 'directive/directive.html',
+                    templateUrl: 'people/people.html',
                     controller: 'MainCtrl'
                 },
                 'header@': {
-                    template: '<h4>Directives</h4>'
+                    template: '<h4>People</h4>'
                 },
                 'footer@': {
                     templateUrl: 'layout/footer.html'
@@ -40,6 +41,20 @@
                 age: 62
             }
         ];
+    }
 
+    function DudeDirective() {
+        return {
+            restrict: 'E',
+            templateUrl: 'people/dude.html',
+            scope: {
+                person: '='
+            },
+            controller: function ($scope) {
+                $scope.personOnClick = function (person) {
+                    console.log('Do something with Mr', person.lastname);
+                }
+            }
+        }
     }
 })();

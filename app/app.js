@@ -4,7 +4,7 @@
     angular.module('demo', [
         'ui.router',
 
-        'demo.directive',
+        'demo.people',
         'demo.binding'
     ])
     .config(['$urlRouterProvider', '$stateProvider', AppConfig]);
