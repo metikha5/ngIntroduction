@@ -2,7 +2,7 @@
     angular.module('demo.people', [])
 
     .config(['$stateProvider', RouteConfig])
-    .controller('MainCtrl', ['$scope', MainController])
+    .controller('MainCtrl', ['$scope', 'mathieu', MainController])
     .directive('dude', DudeDirective);
 
     function RouteConfig($stateProvider) {
@@ -19,11 +19,24 @@
                 'footer@': {
                     templateUrl: 'layout/footer.html'
                 }
+            },
+            onEnter: function () {
+                console.log('Bonjour le monde');
+            },
+            resolve: {
+                mathieu: function () {
+                    return {
+                        firstname: 'Mathien',
+                        lastname: 'Delacroix',
+                        age: 22
+                    };
+                }
             }
         });
     }
 
-    function MainController($scope) {
+    function MainController($scope, mathieu) {
+        console.log(mathieu);
         $scope.people = [
             {
                 firstname: 'John',
