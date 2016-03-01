@@ -1,2 +1,3 @@
 # ngIntroduction
-TP d'introduction à angularJS
+
+Small projet used as a live coding playground for a presentation for beginners.
